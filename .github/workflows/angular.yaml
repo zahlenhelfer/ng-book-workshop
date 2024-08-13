@@ -29,3 +29,10 @@ jobs:
 
     - name: Build
       run: npm run build
+
+    - name: Deploy to gh pages
+      run: |
+        npx angular-cli-ghpages --dir=dist/books
+      env:
+        CI: true
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
