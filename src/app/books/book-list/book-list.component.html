@@ -1,15 +1,17 @@
-<table class="books">
+<table class="books" *ngIf="books.length>0; else noBooks">
     <thead>
         <tr>
-            <th>Title</th>
+            <th>Position:</th>
+            <th>Titel</th>
             <th>ISBN</th>
-            <th>Price</th>
-            <th>Rating</th>
+            <th>Preis</th>
+            <th>Bewertung</th>
         </tr>
     </thead>
     <tbody>
         <!-- Add your book data here -->
-        <tr *ngFor="let book of books">
+        <tr *ngFor="let book of books; index as i;">
+            <td>{{i+1 }}</td>
             <td>{{book.title}}</td>
             <td>{{book.isbn}}</td>
             <td>{{book.price}}</td>
@@ -17,3 +19,7 @@
         </tr>
     </tbody>
 </table>
+
+<ng-template #noBooks>
+    <p>Keine Bücher vorhanden</p>
+</ng-template>
