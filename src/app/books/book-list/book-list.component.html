@@ -1,1 +1,19 @@
-<p>book-list works!</p>
+<table class="books">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>ISBN</th>
+            <th>Price</th>
+            <th>Rating</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Add your book data here -->
+        <tr *ngFor="let book of books">
+            <td>{{book.title}}</td>
+            <td>{{book.isbn}}</td>
+            <td>{{book.price}}</td>
+            <td>{{book.rating}}</td>
+        </tr>
+    </tbody>
+</table>
