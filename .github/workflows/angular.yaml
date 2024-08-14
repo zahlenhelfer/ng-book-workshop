@@ -34,11 +34,12 @@ jobs:
 
     - name: Build Github Pages Angular Site
       #run: npm run build --base-href=https://${{github.actor}}.github.io/${{github.event.repository.name}}/
-      run: npm run build --base-href=/${{github.event.repository.name}}/
+      run: npm run build
 
     - name: Deploy
       if: success()
       uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: dist/${{github.event.repository.name}}/browser/
+        #publish_dir: dist/${{github.event.repository.name}}/browser/
+        publish_dir: dist/books/browser
