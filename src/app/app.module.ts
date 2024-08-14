@@ -7,6 +7,7 @@ import { BookListComponent } from './books/book-list/book-list.component';
 import { FormsModule } from '@angular/forms';
 import { BookSearchFilterPipe } from './books/book-search-filter.pipe';
 import { RatingComponent } from './shared/rating/rating.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { RatingComponent } from './shared/rating/rating.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
