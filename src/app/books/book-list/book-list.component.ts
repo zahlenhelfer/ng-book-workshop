@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
 
 export class BookListComponent {
 
+  filterValue: string = '';
+
   coverIsVisible = true;
 
   toggleCover() {

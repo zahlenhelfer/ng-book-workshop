@@ -2,6 +2,9 @@
     {{ coverIsVisible ? 'Cover ausblenden' : 'Cover einblenden' }}
 </button>
 
+<p>Filter: <input type="text" [(ngModel)]="filterValue" /></p>
+
+<p>{{books.length}} Bücher gefiltert nach {{filterValue}}</p>
 <table class="books" *ngIf="books.length>0; else noBooks">
     <thead>
         <tr>
