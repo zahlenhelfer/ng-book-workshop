@@ -8,49 +8,68 @@ import { Component } from '@angular/core';
 
 export class BookListComponent {
 
+  coverIsVisible = true;
+
+  toggleCover() {
+    this.coverIsVisible = !this.coverIsVisible;
+  }
+
   books = [
     {
       "isbn": "978-0-596-52068-8",
       "title": "JavaScript: The Good Parts",
       "price": 29.99,
-      "rating": 4.5
+      "rating": 4.5,
+      "coverUrl": "https://example.com/js-good-parts.jpg"
     },
     {
       "isbn": "978-1-59327-584-6",
       "title": "Python Crash Course",
       "price": 24.99,
-      "rating": 4.7
+      "rating": 4.7,
+      "coverUrl": "https://example.com/python-crash-course.jpg"
     },
     {
       "isbn": "978-0-596-00708-4",
       "title": "Learning Perl",
       "price": 39.99,
-      "rating": 4.2
+      "rating": 4.2,
+      "coverUrl": "https://example.com/learning-perl.jpg"
     },
     {
       "isbn": "978-1-59327-603-4",
       "title": "Automate the Boring Stuff with Python",
       "price": 29.99,
-      "rating": 4.8
+      "rating": 4.8,
+      "coverUrl": "https://example.com/automate-boring-stuff.jpg"
     },
     {
       "isbn": "978-1-59327-702-4",
       "title": "Eloquent JavaScript",
       "price": 34.99,
-      "rating": 4.6
+      "rating": 4.6,
+      "coverUrl": "https://example.com/eloquent-javascript.jpg"
     },
     {
       "isbn": "978-1-59327-950-9",
       "title": "Python for Data Analysis",
       "price": 44.99,
-      "rating": 4.4
+      "rating": 4.4,
+      "coverUrl": "https://example.com/python-data-analysis.jpg"
     },
     {
-      "isbn": "978-1-59327-792-5",
+      "isbn": "978-0137081073",
       "title": "Clean Code",
       "price": 49.99,
-      "rating": 4.9
+      "rating": 4.9,
+      "coverUrl": "https://example.com/clean-code.jpg"
+    },
+    {
+      "isbn": "9783864909467",
+      "title": "Angular",
+      "price": 42.90,
+      "rating": 4.9,
+      "coverUrl": "https://example.com/clean-code.jpg"
     }
   ];
-
 }
