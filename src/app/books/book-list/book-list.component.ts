@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Book } from '../book';
 
 @Component({
   selector: 'book-list',
@@ -16,7 +17,7 @@ export class BookListComponent {
     this.coverIsVisible = !this.coverIsVisible;
   }
 
-  books = [
+  books: Array<Book> = [
     {
       "isbn": "978-0-596-52068-8",
       "title": "JavaScript: The Good Parts",
