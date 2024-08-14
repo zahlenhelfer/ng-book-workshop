@@ -12,6 +12,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
     - name: Checkout the source code
@@ -31,7 +33,7 @@ jobs:
       run: npm run build
 
     - name: Build Github Pages Angular Site
-      run: npm run build -- --base-href https://${{github.actor}}.github.io/${{github.event.repository.name}}/
+      run: npm run build --base-href https://${{github.actor}}.github.io/${{github.event.repository.name}}/
 
     - name: Deploy
       if: success()
