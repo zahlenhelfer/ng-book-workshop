@@ -14,4 +14,7 @@ export class BookDataService {
     return this.http.get<Array<Book>>('http://localhost:3000/books');
   }
 
+  getBook(isbn: string): Observable<Book> {
+    return this.http.get<Book>('http://localhost:3000/books/' + isbn);
+  }
 }

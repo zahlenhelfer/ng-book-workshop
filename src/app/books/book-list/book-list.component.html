@@ -20,7 +20,7 @@
         <!-- Add your book data here -->
         <tr *ngFor="let book of (books | bookSearchFilter: filterValue); index as i;">
             <td>{{i+1 }}</td>
-            <td>{{book.title}}</td>
+            <td><a [routerLink]="['/book', book.isbn]">{{book.title}}</a></td>
             <td>{{book.isbn}}</td>
             <td>{{book.price | currency:'EUR':'symbol':'1.2-2'}}</td>
             <td>

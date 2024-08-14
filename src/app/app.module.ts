@@ -8,13 +8,17 @@ import { FormsModule } from '@angular/forms';
 import { BookSearchFilterPipe } from './books/book-search-filter.pipe';
 import { RatingComponent } from './shared/rating/rating.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { WelcomeComponent } from './books/welcome/welcome.component';
+import { BookDetailComponent } from './books/book-detail/book-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BookListComponent,
     BookSearchFilterPipe,
-    RatingComponent
+    RatingComponent,
+    WelcomeComponent,
+    BookDetailComponent
   ],
   imports: [
     BrowserModule,
