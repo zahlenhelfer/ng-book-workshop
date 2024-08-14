@@ -1,10 +1,10 @@
 <button (click)="toggleCover()">
     {{ coverIsVisible ? 'Cover ausblenden' : 'Cover einblenden' }}
 </button>
+<p>
 
-<p>Filter: <input type="text" [(ngModel)]="filterValue" /></p>
-
-<p>{{books.length}} Bücher gefiltert nach {{filterValue}}</p>
+    Filter: <input type="text" [(ngModel)]="filterValue" />
+</p>
 <table class="books" *ngIf="books.length>0; else noBooks">
     <thead>
         <tr>
@@ -22,12 +22,15 @@
             <td>{{i+1 }}</td>
             <td>{{book.title}}</td>
             <td>{{book.isbn}}</td>
-            <td>{{book.price}}</td>
+            <td>{{book.price | currency:'EUR':'symbol':'1.2-2'}}</td>
             <td>{{book.rating}}</td>
             <td *ngIf="coverIsVisible"><img src="https://covers.openlibrary.org/b/isbn/{{book.isbn}}-S.jpg" /></td>
         </tr>
     </tbody>
 </table>
+<p>
+    {{books.length}} Bücher gefiltert nach {{filterValue}}
+</p>
 
 <ng-template #noBooks>
     <p>Keine Bücher vorhanden</p>
