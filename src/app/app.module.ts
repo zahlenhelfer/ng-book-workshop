@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BookListComponent } from './books/book-list/book-list.component';
 import { FormsModule } from '@angular/forms';
+import { BookSearchFilterPipe } from './books/book-search-filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BookListComponent
+    BookListComponent,
+    BookSearchFilterPipe
   ],
   imports: [
     BrowserModule,

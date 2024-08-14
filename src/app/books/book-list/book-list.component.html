@@ -18,7 +18,7 @@
     </thead>
     <tbody>
         <!-- Add your book data here -->
-        <tr *ngFor="let book of books; index as i;">
+        <tr *ngFor="let book of (books | bookSearchFilter: filterValue); index as i;">
             <td>{{i+1 }}</td>
             <td>{{book.title}}</td>
             <td>{{book.isbn}}</td>
