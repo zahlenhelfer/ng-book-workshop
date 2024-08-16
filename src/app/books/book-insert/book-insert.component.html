@@ -1,0 +1,28 @@
+<p>Neues Buch</p>
+
+<form [formGroup]="bookForm" (ngSubmit)="speichern()">
+    <div class="form-group">
+        <label for="isbn">ISBN</label>
+        <input type="text" class="form-control" id="isbn" formControlName="isbn">
+    </div>
+    <div class="form-group">
+        <label for="title">Titel</label>
+        <input type="text" class="form-control" id="title" formControlName="title">
+    </div>
+    <div class="form-group">
+        <label for="price">Preis</label>
+        <input type="number" class="form-control" id="price" formControlName="price">
+    </div>
+    <div class="form-group">
+        <label for="coverUrl">Buchumschlag</label>
+        <input type="text" class="form-control" id="coverUrl" formControlName="coverUrl">
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="!bookForm.valid">Speichern</button>
+
+    <p>Werte:
+        {{bookForm.value | json}}</p>
+    <p>Fehler:
+        {{bookForm.errors | json}}</p>
+    <p>Valid:
+        {{bookForm.valid}}</p>

@@ -1,6 +1,25 @@
-Anwendung {{title}}
+<p>Anwendung {{ title }}></p>
+NAV:&nbsp;&nbsp;&nbsp;
 <a routerLink="/">Home</a>&nbsp;&nbsp;&nbsp;
-<a routerLink="/books">Bücher</a>&nbsp;&nbsp;&nbsp;
-<a [routerLink]='["/book/", "978-1-59327-584-6"]'>Buch</a><br>
+<a routerLink="/newbook">Buch anlegen</a>&nbsp;&nbsp;&nbsp;
+<a routerLink="/books">Bücherliste</a>&nbsp;&nbsp;&nbsp;
+<a [routerLink]='["/book/", "978-1-59327-584-6"]'>Buch Details</a>&nbsp;&nbsp;&nbsp;
+<a [routerLink]='["/insertbook"]'>Neues Buch anlegen</a>
+<br>
+
+
+<mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/">Welcome</button>
+    <button mat-menu-item routerLink="/newbook">Book create</button>
+    <button mat-menu-item routerLink="/books">Book list</button>
+</mat-menu>
+
+<mat-menu #about="matMenu">
+    <button mat-menu-item routerLink="/version">Version</button>
+    <button mat-menu-item routerLink="/info">Info</button>
+</mat-menu>
+
+<button mat-button [matMenuTriggerFor]="menu">Books</button>
+<button mat-button [matMenuTriggerFor]="about">About</button>
 
 <router-outlet />

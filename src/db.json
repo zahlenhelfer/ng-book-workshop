@@ -52,9 +52,19 @@
     {
       "isbn": "9783864909467",
       "title": "Angular",
-      "price": 42.90,
+      "price": 42.9,
       "rating": 4.9,
       "coverUrl": "https://example.com/clean-code.jpg"
+    },
+    {
+      "isbn": "76576576576",
+      "title": "testbuch",
+      "price": 12.33
+    },
+    {
+      "isbn": "1111",
+      "title": "PHP ",
+      "price": 12.21
     }
   ]
 }

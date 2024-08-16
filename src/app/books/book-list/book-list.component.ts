@@ -5,7 +5,7 @@ import { BookDataService } from '../book-data.service';
 @Component({
   selector: 'book-list',
   templateUrl: './book-list.component.html',
-  styleUrl: './book-list.component.css'
+  styleUrl: './book-list.component.css',
 })
 
 export class BookListComponent implements OnInit {
@@ -44,4 +44,5 @@ export class BookListComponent implements OnInit {
   }
 
   books: Array<Book> = [];
+
 }
