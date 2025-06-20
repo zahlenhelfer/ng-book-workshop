@@ -2,6 +2,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { Book } from './book';
 
 @Pipe({
+  standalone: false,
   name: 'bookSearchFilter'
 })
 export class BookSearchFilterPipe implements PipeTransform {

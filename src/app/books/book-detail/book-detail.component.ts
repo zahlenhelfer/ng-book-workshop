@@ -4,6 +4,7 @@ import { BookDataService } from '../book-data.service';
 import { Book } from '../book';
 
 @Component({
+  standalone: false,
   selector: 'book-detail',
   templateUrl: './book-detail.component.html',
   styleUrl: './book-detail.component.css'

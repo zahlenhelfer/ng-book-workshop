@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
 
 @Component({
+  standalone: false,
   selector: 'rating',
   templateUrl: './rating.component.html',
   styleUrl: './rating.component.css'
