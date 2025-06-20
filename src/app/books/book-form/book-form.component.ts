@@ -5,6 +5,7 @@ import { BookDataService } from '../book-data.service';
 import { Router } from '@angular/router';
 
 @Component({
+  standalone: false,
   selector: 'books-book-form',
   templateUrl: './book-form.component.html',
   styleUrl: './book-form.component.css'

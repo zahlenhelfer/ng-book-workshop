@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
+  standalone: false,
   selector: 'book-insert',
   templateUrl: './book-insert.component.html',
   styleUrl: './book-insert.component.css'
