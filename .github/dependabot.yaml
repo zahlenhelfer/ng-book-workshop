@@ -9,6 +9,7 @@ updates:
   directory: "/" # Location of package manifests
   schedule:
     interval: "weekly"
+  versioning-strategy: increase # will only increase the version requirements in your package files
 
 - package-ecosystem: "github-actions" # See documentation for possible values
   directory: "/" # Location of package manifests
