@@ -9,6 +9,9 @@ updates:
     directory: "/" # or your subdirectory if different
     schedule:
       interval: "weekly"
+    allow:
+      - dependency-name: "@angular/*"
+        versions: ["19.x"]
     commit-message:
       prefix: "chore"
     ignore:
