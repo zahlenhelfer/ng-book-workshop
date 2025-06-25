@@ -5,13 +5,17 @@
 
 version: 2
 updates:
-- package-ecosystem: "npm" # See documentation for possible values
-  directory: "/" # Location of package manifests
-  schedule:
-    interval: "weekly"
-  versioning-strategy: increase # will only increase the version requirements in your package files
-
-- package-ecosystem: "github-actions" # See documentation for possible values
-  directory: "/" # Location of package manifests
-  schedule:
-    interval: "weekly"
+  - package-ecosystem: "npm"
+    directory: "/" # or subfolder, if your package.json is in a subdirectory
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "chore"
+    ignore:
+      - dependency-name: "@angular/*"
+        versions: ["19"] # optional, if you want to skip some
+  - package-ecosystem: "github-actions" # See documentation for possible values
+    directory: "/" # Location of package manifests
+    schedule:
+      interval: "weekly"
