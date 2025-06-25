@@ -6,15 +6,14 @@
 version: 2
 updates:
   - package-ecosystem: "npm"
-    directory: "/" # or subfolder, if your package.json is in a subdirectory
+    directory: "/" # or your subdirectory if different
     schedule:
       interval: "weekly"
-    open-pull-requests-limit: 5
     commit-message:
       prefix: "chore"
     ignore:
       - dependency-name: "@angular/*"
-        versions: ["19"] # optional, if you want to skip some
+        versions: [">=20.0.0"]
   - package-ecosystem: "github-actions" # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule:
