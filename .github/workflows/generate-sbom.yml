@@ -2,7 +2,14 @@ name: Generate SBOM with CycloneDX
 
 on:
   push:
-    branches: [ main ]
+    branches: ["main"]
+    paths-ignore:
+      - 'README.md'
+  pull_request:
+    branches: ["main"]
+    paths-ignore:
+      - 'README.md'
+  workflow_dispatch:
 
 jobs:
   generate-sbom:
