@@ -11,12 +11,25 @@ updates:
       interval: "weekly"
     allow:
       - dependency-name: "@angular/*"
-        versions: ["19.x"]
+        versions: ["20.x"]
     commit-message:
       prefix: "chore"
     ignore:
+      # Angular 21+ requires a dedicated migration (ng update)
       - dependency-name: "@angular/*"
-        versions: [">=20.0.0"]
+        versions: [">=21.0.0"]
+      # TypeScript 6 is not supported by Angular 20 (requires >=5.8 <6.0)
+      - dependency-name: "typescript"
+        versions: [">=6.0.0"]
+      # @angular/core@20 peer-dependency pins zone.js to ~0.15.0
+      - dependency-name: "zone.js"
+        versions: [">=0.16.0"]
+      # jasmine-core 6 / @types/jasmine 6 must land together with a
+      # karma/jasmine toolchain upgrade (revisit with Angular 21)
+      - dependency-name: "jasmine-core"
+        versions: [">=6.0.0"]
+      - dependency-name: "@types/jasmine"
+        versions: [">=6.0.0"]
   - package-ecosystem: "github-actions" # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule:

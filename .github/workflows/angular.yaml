@@ -48,8 +48,9 @@ jobs:
       with:
         path: ./dist/books
 
-  # Deployment job
+  # Deployment job (only on pushes to main - GitHub Pages deployments are not permitted from PRs)
   deploy:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
