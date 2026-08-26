@@ -3,9 +3,9 @@
   "bomFormat": "CycloneDX",
   "specVersion": "1.6",
   "version": 1,
-  "serialNumber": "urn:uuid:48153969-6826-4bbc-bb38-76436f4b81ad",
+  "serialNumber": "urn:uuid:1a26553f-4140-410c-99db-4d28a4636e88",
   "metadata": {
-    "timestamp": "2026-08-26T12:59:05.301Z",
+    "timestamp": "2026-08-26T13:02:14.280Z",
     "tools": {
       "components": [
         {
@@ -1980,8 +1980,8 @@
     {
       "type": "library",
       "name": "karma-jasmine-html-reporter",
-      "version": "2.1.0",
-      "bom-ref": "books@0.1.0|karma-jasmine-html-reporter@2.1.0",
+      "version": "2.2.0",
+      "bom-ref": "books@0.1.0|karma-jasmine-html-reporter@2.2.0",
       "author": "David Federman",
       "description": "A Karma plugin. Dynamically displays tests results at debug.html page",
       "licenses": [
@@ -1992,7 +1992,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/karma-jasmine-html-reporter@2.1.0",
+      "purl": "pkg:npm/karma-jasmine-html-reporter@2.2.0",
       "externalReferences": [
         {
           "url": "git+https://github.com/dfederm/karma-jasmine-html-reporter.git",
@@ -2010,12 +2010,12 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://registry.npmjs.org/karma-jasmine-html-reporter/-/karma-jasmine-html-reporter-2.1.0.tgz",
+          "url": "https://registry.npmjs.org/karma-jasmine-html-reporter/-/karma-jasmine-html-reporter-2.2.0.tgz",
           "type": "distribution",
           "hashes": [
             {
               "alg": "SHA-512",
-              "content": "b0f404d7e9e5b27e87c1be6df871f0cb2d00d4534254ab8bd75f766fe5cd6ae318593873da4c1e881556d43aa5a11a55bd9209908a07541ed74692bbf27d716d"
+              "content": "27495a102e373b2d91751e55e51ddbaa6768ef24486324aae971ca6c0f9ee6248080b8e1475a0808b19e49110f9495e97b235c7497f7275ed871d843d2646cb1"
             }
           ],
           "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
@@ -35067,7 +35067,7 @@
         "books@0.1.0|jasmine-core@5.9.0",
         "books@0.1.0|karma-chrome-launcher@3.2.0",
         "books@0.1.0|karma-coverage@2.2.1",
-        "books@0.1.0|karma-jasmine-html-reporter@2.1.0",
+        "books@0.1.0|karma-jasmine-html-reporter@2.2.0",
         "books@0.1.0|karma-jasmine@5.1.0",
         "books@0.1.0|karma@6.4.4",
         "books@0.1.0|rxjs@7.8.2",
@@ -35365,7 +35365,7 @@
       "ref": "books@0.1.0|karma-coverage@2.2.1|semver@6.3.1"
     },
     {
-      "ref": "books@0.1.0|karma-jasmine-html-reporter@2.1.0",
+      "ref": "books@0.1.0|karma-jasmine-html-reporter@2.2.0",
       "dependsOn": [
         "books@0.1.0|jasmine-core@5.9.0",
         "books@0.1.0|karma-jasmine@5.1.0",
