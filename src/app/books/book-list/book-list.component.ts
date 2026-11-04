@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { Book } from '../book';
 import { BookDataService } from '../book-data.service';
 
@@ -6,6 +6,7 @@ import { BookDataService } from '../book-data.service';
   standalone: false,
   selector: 'book-list',
   templateUrl: './book-list.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './book-list.component.css',
 })
 

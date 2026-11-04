@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BookDataService } from '../book-data.service';
 import { Book } from '../book';
@@ -7,6 +7,7 @@ import { Book } from '../book';
   standalone: false,
   selector: 'book-detail',
   templateUrl: './book-detail.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './book-detail.component.css'
 })
 

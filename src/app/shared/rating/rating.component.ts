@@ -1,9 +1,10 @@
-import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   standalone: false,
   selector: 'rating',
   templateUrl: './rating.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './rating.component.css'
 })
 export class RatingComponent implements OnChanges {
