@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Book } from '../book';
 import { BookDataService } from '../book-data.service';
@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
   standalone: false,
   selector: 'books-book-form',
   templateUrl: './book-form.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './book-form.component.css'
 })
 export class BookFormComponent {

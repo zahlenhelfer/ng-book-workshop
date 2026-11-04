@@ -2,7 +2,9 @@
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fzahlenhelfer%2Fng-book-workshop.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fzahlenhelfer%2Fng-book-workshop?ref=badge_shield)
 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.4.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.4 and now runs on Angular 22.
+
+It requires Node.js `^22.22.3`, `^24.15.0` or `>=26.0.0`.
 
 ## Access via GitHub-Pages
 [Homepage](https://zahlenhelfer.github.io/ng-book-workshop/).

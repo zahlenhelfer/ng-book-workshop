@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   standalone: false,
   selector: 'book-insert',
   templateUrl: './book-insert.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './book-insert.component.css'
 })
 
