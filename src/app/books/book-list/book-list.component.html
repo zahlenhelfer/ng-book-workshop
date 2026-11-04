@@ -1,41 +1,48 @@
 <button (click)="toggleCover()">
-    {{ coverIsVisible ? 'Cover ausblenden' : 'Cover einblenden' }}
+  {{ coverIsVisible ? 'Cover ausblenden' : 'Cover einblenden' }}
 </button>
 <p>
 
-    Filter: <input type="text" [(ngModel)]="filterValue" />
+  Filter: <input type="text" [(ngModel)]="filterValue" />
 </p>
-<table class="books" *ngIf="books.length>0; else noBooks">
+@if (books.length>0) {
+  <table class="books">
     <thead>
-        <tr>
-            <th>Position:</th>
-            <th>Titel</th>
-            <th>ISBN</th>
-            <th>Preis</th>
-            <th>Bewertung</th>
-            <th *ngIf="coverIsVisible">Buchcover</th>
-        </tr>
+      <tr>
+        <th>Position:</th>
+        <th>Titel</th>
+        <th>ISBN</th>
+        <th>Preis</th>
+        <th>Bewertung</th>
+        @if (coverIsVisible) {
+          <th>Buchcover</th>
+        }
+      </tr>
     </thead>
     <tbody>
-        <!-- Add your book data here -->
-        <tr *ngFor="let book of (books | bookSearchFilter: filterValue); index as i;">
-            <td>{{i+1 }}</td>
-            <td><a [routerLink]="['/book', book.isbn]">{{book.title}}</a></td>
-            <td>{{book.isbn}}</td>
-            <td>{{book.price | currency:'EUR':'symbol':'1.2-2'}}</td>
-            <td>
-                <rating [stars]="book.rating" [id]="book.isbn" (plusWasClicked)="plus($event)"
-                    (minusWasClicked)="minus($event)"></rating>
-            </td>
-            <td *ngIf="coverIsVisible"><img src="https://covers.openlibrary.org/b/isbn/{{book.isbn}}-S.jpg" /></td>
+      <!-- Add your book data here -->
+      @for (book of (books | bookSearchFilter: filterValue); track book; let i = $index) {
+        <tr>
+          <td>{{i+1 }}</td>
+          <td><a [routerLink]="['/book', book.isbn]">{{book.title}}</a></td>
+          <td>{{book.isbn}}</td>
+          <td>{{book.price | currency:'EUR':'symbol':'1.2-2'}}</td>
+          <td>
+            <rating [stars]="book.rating" [id]="book.isbn" (plusWasClicked)="plus($event)"
+            (minusWasClicked)="minus($event)"></rating>
+          </td>
+          @if (coverIsVisible) {
+            <td><img src="https://covers.openlibrary.org/b/isbn/{{book.isbn}}-S.jpg" /></td>
+          }
         </tr>
+      }
     </tbody>
-</table>
+  </table>
+} @else {
+  <p>Keine Bücher vorhanden</p>
+}
 <p>
-    {{books.length}} Bücher gefiltert nach {{filterValue}}
+  {{books.length}} Bücher gefiltert nach {{filterValue}}
 </p>
 
 
-<ng-template #noBooks>
-    <p>Keine Bücher vorhanden</p>
-</ng-template>
